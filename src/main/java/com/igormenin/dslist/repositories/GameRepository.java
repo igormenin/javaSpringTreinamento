@@ -11,7 +11,7 @@ import com.igormenin.dslist.projections.GameMinProjection;
 public interface GameRepository extends JpaRepository<Game, Long> {
 	
 	@Query(nativeQuery = true, value = """
-			SELECT tb_game.id, tb_game.title, tb_game.game_year as `year`, 
+			SELECT tb_game.id, tb_game.title, tb_game.game_year as gameYear, 
 					tb_game.img_url as imgUrl, tb_game.short_description as shortDescription, 
 					tb_belonging.position
 			FROM tb_game
